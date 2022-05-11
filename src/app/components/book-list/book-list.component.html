@@ -1,24 +1,26 @@
 
-<table border="1">
+
+<div class="container mt-3">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th></th>
         <th>name</th>
-        <th>desciption</th>
+        <th>description</th>
         <th>price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let book of books">
-      <td>
-          <img src="http://placehold.it/50x75" >
-      </td>
-      <td>{{book.name}}</td>
-      <td>{{book.desciption}}</td>
-      <td>{{book.price | currency }}</td>
-    </tr>
-  </tbody>
-  
-  
-  
+        <th>units</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>
+            <img [src]="book.imageurl" height="50" >
+        </td>
+        <td>{{book.name}}</td>
+        <td>{{book.desciption}}</td>
+        <td>{{book.price | currency }}</td>
+        <td>{{book.units}}</td>
+      </tr>
+    </tbody>
   </table>
+</div>
