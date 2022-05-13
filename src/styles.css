@@ -1,8 +1,52 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
 @font-face {
     font-family: 'Roboto Bold' ;
     src: url(/assets/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
 }
 
-body{
+h1{
     font-family: 'Roboto Bold';
 }
+
+.nav {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .nav {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .nav a {
+      text-align: center;
+      float: none;
+    }
+  }
+  .bg-dark {
+    margin-left: 210px;
+    margin-right: 210px;
+    position: relative;
+    background-image: url(assets/images/books/text-1.png);
+   }
+  
+   .read{
+     color: crimson;
+   }
+
+
