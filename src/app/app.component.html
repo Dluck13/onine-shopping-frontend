@@ -1,5 +1,6 @@
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <div class="container px-4 px-lg-5">
             <h1><a class="navbar-brand" href="#!">Book World</a></h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -30,17 +31,25 @@
                 </form>
             </div>
         </div>
-    </nav>
+    </nav> <br>
+
    
   
     <!-- Header -->
 
     <nav class="nav flex-column" >
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Text-Books</a>
-        <a class="nav-link" href="#">Fantasy</a>
-        <a class="nav-link" href="#">Horror</a>
-        <a class="nav-link" href="#">Sports</a>
+        <a routerLink="/category/1" class="list-group-item"
+        routerLinkActive="bg-primary text-white font-weight-bold">
+        Text-Books</a>
+        <a routerLink="/category/2" class="list-group-item"  
+        routerLinkActive="bg-primary text-white font-weight-bold">
+        Fantasy</a>
+        <a routerLink="/category/3" class="list-group-item"
+        routerLinkActive="bg-primary text-white font-weight-bold">
+        Horror</a>
+        <a routerLink="/category/4" class="list-group-item"
+        routerLinkActive="bg-primary text-white font-weight-bold">
+        Sports</a>
     </nav><br>
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
@@ -54,15 +63,17 @@
     
     <br>
     <!-- Section-->
-    <!-- <section class="py-5"> -->
-        <!-- <div class="container px-4 px-lg-5 mt-5"> -->
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-2 row-cols-xl-4 justify-content-center">
+    <section class="py-5">
+    <div class="products">
+        <div class="container px-4 px-lg-5 mt-5">
 
-               <app-book-list></app-book-list> 
-               
-                </div>
-            <!-- </div> -->
-    <!-- </section> -->
+                
+            <router-outlet></router-outlet>  
+           
+        </div>
+    </div>
+   
+    </section>
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
@@ -72,6 +83,5 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
 
+    
 
-
-<router-outlet></router-outlet>
